@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Game</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/game.css" />
+	</head>
+	<body>
+<!-- share start -->
+<div id='shareDiv' style='display:none'>
+	<div class="bshare-custom icon-medium-plus">
+	<div class="bsPromo bsPromo2"></div>
+	<a title="Share to" class="bshare-more">Share to </a>
+	<a title="Share to Gmail" class="bshare-gmail" href="javascript:void(0);"></a>
+	<a title="Share to Facebook" class="bshare-facebook" href="javascript:void(0);"></a>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</div>
+<!-- share end -->
+		<div class="box pb50">
+			<div class="menuBox">
+				<a href="rule.html"><button type="button">Rule</button></a>
+				<a href="" class="active"><button type="button">Game</button></a>
+				<a href="calendar.html"><button type="button">Calendar</button></a>
+				<a href="history.html"><button type="button">History</button></a>
+				<a href="javascript:logout()" style='float:right'><button type="button">Log out</button></a>
+			</div>
+			<h2 class="title pt50">SUDOKU</h2>
+			<div style='height:60%; margin-top:100px; width:600px; margin: 0 auto;'>
+				<table id='board' cellpadding=0 cellspacing=0>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="digit_cell">1</td>
+									<td class="digit_cell">2</td>
+									<td class="digit_cell">3</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">4</td>
+									<td class="digit_cell">5</td>
+									<td class="digit_cell">6</td>
+								</tr>
+								<tr>
+									<td class="digit_cell">7</td>
+									<td class="digit_cell">8</td>
+									<td class="digit_cell">9</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+				<br />
+				<br />
+				<input type='button' id='start_btn' value='New Puzzle' />
+				<input type='button' id='submit_btn' value='Submit' />
+
+			</div>
+
+			<!-- digit input layer -->
+			<div class="inputter" id='inputter'>
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+				<div class="close">X</div>
+			</div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script src="js/logout.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+.formBox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	background: #fff;
+	border-radius: 20px;
+	padding: 40px;
+	margin-top: -100px;
+}
+
+.formItem{
+	width: 600px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	margin-top: 30px;
+}
+.formItem label{
+	width: 100px;
+}
+.formItem input{
+	flex: 1;
+	height: 100%;
+	border: 1px solid #333;
+	border-radius: 15px;
+	padding: 0 10px;
+}
+.btnBox{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.btnBox button{
+	width: 140px;
+	height: 52px;
+	font-size: 24px;
+	background: #00aaff;
+	border-radius: 10px;
+}
+
+
+
+/* History */
+.historyBox{
+	width: 80%;
+	/* padding: 0 40px; */
+	border: 1px solid #808080;
+	background: rgba(255,255,255,.3);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.historyItem{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	padding: 20px 40px;
+	border-bottom: 1px solid #808080;
+}
+.historyItem:last-child{
+	border-bottom: none;
+}
+.historyLeft{
+	font-size: 16px;
+}
+.historyLeft h2{
+	font-weight: normal;
+}
+.historyLeft p{
+	color: #808080;
+	margin-top: 10px;
+}
+
+
+/* Calendar */
+.calendarBox{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.monthTitle{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+.pre,.next{
+	width: 30px;
+	height: 30px;
+	background: #333333;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0 20px;
+	cursor: pointer;
+}
+.calendarCon{
+	background: #D3D3D3;
+	margin-top: 30px;
+}
+.calendarTitle,.calendarDay{
+	display: flex;
+	align-items: center;
+	height: 60px;
+	font-size: 20px;
+}
+.calendarCon div p{
+	width: 14.28%;
+	height: 100%;
+	line-height: 60px;
+	text-align: center;
+	position: relative;
+	/* margin: 0 10px; */
+}
+.calendarCon div p span{
+	width: 40px;
+	height: 40px;
+	background: #55aaff;
+	border-radius: 50%;
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+.calendarCon div p.signed{
+	color: #fff;
+	z-index: 10;
+}
+.calendarCon div p.signed span{
+	display: block;
+	z-index: -1;
+}
+
+.calendarTitle{
+	background: #9c9595;
+}
+.calendarDay{
+	/* margin: 10px 0; */
+	/* background: #D3D3D3; */
+}
